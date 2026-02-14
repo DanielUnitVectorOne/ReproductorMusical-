@@ -1,0 +1,37 @@
+# Archivos compilados de Java
+*.class
+*.jar
+*.war
+*.ear
+
+# NetBeans specific
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+nbactions.xml
+
+# Archivos de construcción
+/build/
+/dist/
+
+# Archivos de datos (serialización)
+datos/
+*.dat
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de logs
+*.log
+
+# Configuraciones locales
+*.properties.local
+
+# Archivos temporales
+*~
+*.swp
+*.bak
