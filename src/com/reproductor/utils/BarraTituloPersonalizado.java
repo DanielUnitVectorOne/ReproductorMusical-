@@ -9,6 +9,7 @@ import java.awt.Point;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -41,13 +42,19 @@ public class BarraTituloPersonalizado extends JPanel {
     
     private void agregarBotones() {
         // Botón cerrar
-        JButton btnCerrar = crearBotonControl("×", Constantes.COLOR_ERROR);
+        JButton btnCerrar = crearBotonControl("", Constantes.COLOR_ERROR);
+        ImageIcon iconoCerrar = new ImageIcon(getClass().getResource("/com/recursos/iconos/cerrar-ventana-96_1.png"));
+        btnCerrar.setIcon(iconoCerrar);
         btnCerrar.setBounds(getPreferredSize().width - 50, 0, 50, Constantes.ALTURA_BARRA_TITULO);
         btnCerrar.addActionListener(e -> System.exit(0));
+
         add(btnCerrar);
         
+        
         // Botón minimizar
-        JButton btnMinimizar = crearBotonControl("−", Constantes.COLOR_FONDO_CLARO);
+        JButton btnMinimizar = crearBotonControl("", Constantes.COLOR_FONDO_CLARO);
+        ImageIcon iconoMinimizar = new ImageIcon(getClass().getResource("/com/recursos/iconos/menos (1).png"));
+        btnMinimizar.setIcon(iconoMinimizar);
         btnMinimizar.setBounds(getPreferredSize().width - 100, 0, 50, Constantes.ALTURA_BARRA_TITULO);
         btnMinimizar.addActionListener(e -> ventana.setState(Frame.ICONIFIED));
         add(btnMinimizar);
@@ -63,7 +70,7 @@ public class BarraTituloPersonalizado extends JPanel {
         btn.setContentAreaFilled(false);
         btn.setCursor(new Cursor(Cursor.HAND_CURSOR));
         
-        btn.addMouseListener(new MouseAdapter() {
+        /*btn.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
                 btn.setBackground(colorHover);
@@ -75,7 +82,7 @@ public class BarraTituloPersonalizado extends JPanel {
                 btn.setOpaque(false);
             }
         });
-        
+        */
         return btn;
     }
     

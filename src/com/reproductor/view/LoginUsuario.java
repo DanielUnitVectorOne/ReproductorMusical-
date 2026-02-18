@@ -37,7 +37,7 @@ public class LoginUsuario extends JFrame {
         add(panelFondo, BorderLayout.CENTER);
         
         // Icono
-        JLabel lblIcono = new JLabel("👤");
+        JLabel lblIcono = new JLabel(new ImageIcon(getClass().getResource("/com/recursos/iconos/add-user.png")));
         lblIcono.setFont(new Font("Segoe UI Emoji", Font.PLAIN, 60));
         lblIcono.setHorizontalAlignment(SwingConstants.CENTER);
         lblIcono.setBounds(0, 60, 500, 70);

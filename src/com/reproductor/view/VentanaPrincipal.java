@@ -56,6 +56,8 @@ public class VentanaPrincipal extends JFrame {
         
         // Botón Administrador
         btnAdmin = new BotonRedondeado("ADMINISTRADOR", Constantes.COLOR_PRIMARIO);
+        ImageIcon iconoAdm = new ImageIcon(getClass().getResource("/com/recursos/iconos/admin1.png"));
+        btnAdmin.setIcon(iconoAdm);
         btnAdmin.setFont(new Font("Segoe UI", Font.BOLD, 16));
         btnAdmin.setBounds(400, 300, 400, 60);
         btnAdmin.addActionListener(e -> abrirLoginAdmin());
@@ -63,6 +65,8 @@ public class VentanaPrincipal extends JFrame {
         
         // Botón Usuario
         btnUsuario = new BotonRedondeado("USUARIO", Constantes.COLOR_ACENTO);
+        ImageIcon iconoUsu = new ImageIcon(getClass().getResource("/com/recursos/iconos/users.png"));
+        btnUsuario.setIcon(iconoUsu);
         btnUsuario.setFont(new Font("Segoe UI", Font.BOLD, 16));
         btnUsuario.setBounds(400, 380, 400, 60);
         btnUsuario.addActionListener(e -> abrirLoginUsuario());
